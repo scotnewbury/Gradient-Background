@@ -6,7 +6,7 @@ var body = document.getElementById("gradient");
 function randomGradient () {
 	leftcolor.value = getRandomColor();
     rightcolor.value = getRandomColor();
-    setGradient(); 
+    setGradient();
 }
 
 //Pulled from Stack Overflow
@@ -28,17 +28,21 @@ function addRandomButton() {
 }
 
 function setGradient () {
-	body.style.background = 
-	"linear-gradient(to right, " 
-	+ leftcolor.value 
-	+ ", " 
-	+ rightcolor.value 
+	body.style.background =
+	"linear-gradient(to right, "
+	+ leftcolor.value
+	+ ", "
+	+ rightcolor.value
 	+ ")";
 
-	css.textContent = body.style.background + ";";
+	css.textContent = "linear-gradient(to right, "
+	+ leftcolor.value
+	+ ", "
+	+ rightcolor.value
+	+ ");";
 }
 
-window.addEventListener("load", randomGradient); 
-leftcolor.addEventListener("input", setGradient); 
+window.addEventListener("load", randomGradient);
+leftcolor.addEventListener("input", setGradient);
 rightcolor.addEventListener("input", setGradient);
 addRandomButton();
