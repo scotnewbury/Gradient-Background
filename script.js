@@ -9,7 +9,6 @@ function randomGradient () {
     setGradient();
 }
 
-//Pulled from Stack Overflow
 function getRandomColor() {
   var letters = '0123456789ABCDEF';
   var color = '#';
