@@ -5,8 +5,8 @@ var body = document.getElementById("gradient");
 
 function randomGradient () {
 	leftcolor.value = getRandomColor();
-    rightcolor.value = getRandomColor();
-    setGradient();
+  rightcolor.value = getRandomColor();
+  setGradient();
 }
 
 function getRandomColor() {
@@ -34,11 +34,7 @@ function setGradient () {
 	+ rightcolor.value
 	+ ")";
 
-	css.textContent = "linear-gradient(to right, "
-	+ leftcolor.value
-	+ ", "
-	+ rightcolor.value
-	+ ");";
+  css.textContent = `linear-gradient(to right, ${leftcolor.value}, ${rightcolor.value});`;
 }
 
 window.addEventListener("load", randomGradient);
